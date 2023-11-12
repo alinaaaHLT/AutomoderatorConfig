@@ -1,0 +1,50 @@
+type: comment
+body (regex): ['\baryan', '\bassassin', '\bauschwitz', '\bbehead', '\bblack people', '\bbomb', '\bchild porn', '\bchink', '\bclinton', '\bcolumbine', '\bconcentration camp', '\bcunt', '\bdago', '\bdeath', '\bdecapitat', '\bdies', '\bdied', '\bdrown', '\bexecution', '\bfag', '\bfuck off', '\bfuck you', '\bgenocide', '\bhitler', '\bholocaust', '\bincest', '\bisis', '\bisrael', '\bjewish', '\bjews', '\bjihad', '\bkike', '\bkill', '\bkkk', '\bkys', '\bloli', '\bmaster race', '\bmurder', '\bnationalist', '\bnazi', '\bnigga', '\bnigger', '\bpaedo', '\bpaki', '\bpalestin', '\bpedo', '\bracist', '\brape', '\braping', '\brapist', '\bretard', '\bschool shoot', '\bself harm', '\bshoot', '\bstab', '\bslut', '\bspic', '\bsuicide', '\bswastika', '\bterroris', '\btorture', '\btranny', '\btrump', '\bwhite power', '\byou die', '\btestingregex123', '\btestingregex123456789uuuuuuuuuuuuuuuuuuuuuuuuuuu']
+action: remove
+priority: 1
+author:
+   flair_text (includes-word): ['Verified']
+action_reason: 'Automod negative keyword'
+---
+type: comment
+body (regex): ['\baryan', '\bauschwitz', '\bblack people', '\bchild porn', '\bchink', '\bcolumbine', '\bconcentration camp', '\bdago', '\bfag', '\bgenocide', '\bhitler', '\bholocaust', '\bisrael', '\bjewish', '\bjews', '\bjihad', '\bkike', '\bkkk', '\bloli', '\bnationalist', '\bnazi', '\bnigga', '\bnigger', '\bpaedo', '\bpaki', '\bpalestin', '\bpedo', '\bracist', '\brape', '\braping', '\brapist', '\bretard', '\bschool shoot', '\bself harm', '\bspic', '\bsuicide', '\bswastika', '\bterroris', '\btranny', '\btrump', '\bwhite power']
+priority: 2
+action_reason: 'Automod negative keyword'
+---
+type: submission
+body+title (regex): ['\baryan', '\bassassin', '\bauschwitz', '\bbehead', '\bblack people', '\bbomb', '\bchild porn', '\bchink', '\bclinton', '\bcolumbine', '\bconcentration camp', '\bcuck', '\bcunt', '\bdago', '\bdeath', '\bdecapitat', '\bdies', '\bdied', '\bdrown', '\bexecution', '\bfag', '\bfuck off', '\bfuck you', '\bgenocide', '\bhitler', '\bholocaust', '\bincest', '\bisis', '\bisrael', '\bjewish', '\bjews', '\bjihad', '\bkike', '\bkill', '\bkkk', '\bkys', '\bloli', '\bmaster race', '\bmurder', '\bnationalist', '\bnazi', '\bnigga', '\bnigger', '\bpaedo', '\bpaki', '\bpalestin', '\bpedo', '\bracist', '\brape', '\braping', '\brapist', '\bretard', '\bschool shoot', '\bself harm', '\bshoot', '\bstab', '\bslut', '\bspic', '\bsuicide', '\bswastika', '\bterroris', '\btorture', '\btranny', '\btrump', '\bwhite power', '\byou die']
+action: remove
+priority: 1
+author:
+   flair_text (includes-word): ['Verified']
+action_reason: 'Automod negative keyword'
+
+---
+type: submission
+body+title (regex): ['\bEthereum', '\bNFT']
+action: remove
+action_reason: 'Automod negative keyword'
+moderators_exempt: false
+
+---
+type: comment
+body (regex): ['\bEthereum', '\bNFT']
+action: remove
+action_reason: 'Automod negative keyword'
+moderators_exempt: false
+---
+author: [HungryScientist-GPT2, Patient-SSI, AgentSmith_GPT2, CriticalJossi-GPT2, GrandPa_GPT2, SaintNicholas_GPTBot, TEST2-GPT2Bot,SirLadthe2nd,TOAST2-GPT2BOT,Ganja_botGPTJ,Flappin_Asslips_GPT2,Turbo_Assquake_GPT2,Jessica_GPT2,ZReginald_Bottington, SirLaddyDaddy_BOT]
+action: approve
+priority: 3
+---
+# Sends a modmail when something is reported
+type: any
+reports: 1
+modmail_subject: Report Detected
+modmail: |
+    This {{permalink}} received a report. Check it out. Body info below.
+
+    &nbsp;
+
+    {{body}}
+---
